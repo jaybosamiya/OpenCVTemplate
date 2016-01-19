@@ -9,8 +9,11 @@ if [ "$1" != "" ]; then
 	echo "target_link_libraries( $X "'${OpenCV_LIBS} )' >> CMakeLists.txt
 	echo "Done making CMakeLists.txt file" 1>&2
 	rm -i README.md
-	rm -rfi .git/ && git init && git add *.cpp
+	mkdir build
+	rm -rfI .git/ && git init && git add *.cpp
+	echo "Done initializing a new repository" 1>&2
 	rm -i $0
+	echo "Done!"
 else
 	echo "Usage: $0 {name of filter}" 1>&2
 fi
