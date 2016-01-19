@@ -10,7 +10,8 @@ if [ "$1" != "" ]; then
 	echo "Done making CMakeLists.txt file" 1>&2
 	rm -i README.md
 	mkdir build
-	rm -rfI .git/ && git init && git add *.cpp
+    echo "Deleting old git repository" 1>&2
+	rm -rfI .git/ && git init && git add *.cpp && git add .gitignore
 	echo "Done initializing a new repository" 1>&2
 	rm -i $0
 	echo "Done!"
