@@ -11,7 +11,7 @@ if [ "$1" != "" ]; then
 	rm -i README.md
 	mkdir build
     echo "Deleting old git repository" 1>&2
-	rm -rfI .git/ && git init && git add *.cpp && git add .gitignore
+	rm -rfI .git/ && git init && git add *.cpp && git add .gitignore && git add CMakeLists.txt && git commit -m 'Initial Commit'
 	echo "Done initializing a new repository" 1>&2
 	rm -i $0
 	echo "Done!"
